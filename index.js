@@ -42,6 +42,7 @@ module.exports = {
   setup: async ctx => {
     ctx.config.install = ctx.answers.install && ctx.answers.pm
   },
+  ignoreRender: ['public/index.html'],
   complete: async ctx => {
     console.clear()
     console.log(chalk.green(`\n ## 使用模板[${ctx.template}]成功创建了项目： ${ctx.project}\.\n`))
