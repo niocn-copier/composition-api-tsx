@@ -45,7 +45,7 @@ module.exports = {
   ignoreRender: ['public/index.html'],
   complete: async ctx => {
     console.clear()
-    console.log(chalk.blue(`:checkered_flag:使用模板[${ctx.template}]成功创建了项目： ${ctx.project}\.`))
+    console.log(chalk.blue(`🔥 使用模板[${ctx.template}]成功创建了项目： ${ctx.project}\.`))
     if (ctx.dest !== process.cwd()) {
       console.log(chalk.cyan(`  $ cd ${path.relative(process.cwd(), ctx.dest)}`))
     }
@@ -53,6 +53,6 @@ module.exports = {
       console.log(chalk.cyan(`  $ npm install or # yarn`))
     }
     console.log(chalk.cyan(`  $ ${ctx.config.install ? ctx.config.install : 'npm'} run dev`))
-    console.log(chalk.blue(`:checkered_flag: 现在你可以使用它了,尝试进入该项目运行 npm run serve ~~`))
+    console.log(chalk.blue(`🔥 现在你可以使用它了,尝试进入该项目运行 npm run serve ~~`))
   }
 }
